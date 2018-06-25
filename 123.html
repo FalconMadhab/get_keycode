@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<title>Javascript Program</title>
+<style type="text/css">
+	*{
+		font-family: sans-serif;
+	}
+	h2{
+		text-align: center;
+		text-transform: capitalize;
+	}
+	#list{
+		line-height: 2em;
+	}
+
+</style>
+<script>
+	document.onkeydown=function(event){
+		if(event.keyCode==116){
+			event.preventDefault();
+		}
+		var key = event.key;
+		var code = event.keyCode;
+		var list_element = document.createElement("li");
+		list_element.innerHTML="<strong>Key Pressed: </strong>"+ key + "<br/><strong>Key Code: "+ code;
+
+		document.getElementById("list").appendChild(list_element)
+	}
+	document.onkeyup=function(event){
+		if(event.keyCode==44){
+			alert("The print screen key is pressed");
+		}
+	}
+</script>
+</head>
+<body>
+	<h2>Press any key to get It's KeyCode</h2>
+	<ol id="list">
+
+		
+	</ol>
+
+</body>
+</html>
